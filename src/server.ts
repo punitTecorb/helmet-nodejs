@@ -3,7 +3,6 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
-const rfs = require('rotating-file-stream'); // version 2.x
 // Constants
 const app = express();
 
@@ -55,6 +54,4 @@ if (process.env.NODE_ENV === 'production') {
     
 }
 
-
-// Export here and start in a diff file (for testing).
 export default app;

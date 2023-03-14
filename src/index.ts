@@ -3,8 +3,6 @@ import logger from 'jet-logger';
 import server from './server';
 const { createServer } = require("http");
 const { Server } = require("socket.io");
-import express from 'express';
-
 
 // Constants
 const serverStartMsg = 'Express server started on port: ',
