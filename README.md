@@ -32,7 +32,3 @@
 `npm run build`
 ### prod build run
 `node dist/index.js`
-
-## Send mail demo apis - 
-  #### Send mail api using nodemailer
-  `{{Your Ip}}/api/v1/mailer/senaMailByMailer`
