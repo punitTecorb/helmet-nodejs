@@ -2,7 +2,6 @@ import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import express, { NextFunction, Request, Response } from 'express';
-import 'express-async-errors';
 // Constants
 const app = express();
 
@@ -16,7 +15,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 // Helmet use start -------------------------------
-
 // For normal use
 app.use(helmet());
 // To set custom options for a header, add options
@@ -43,15 +41,5 @@ app.use(helmet.permittedCrossDomainPolicies());
 app.use(helmet.referrerPolicy());
 app.use(helmet.xssFilter());
 // Helmet end -----------------------------
-
-// Show routes called in console during development
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
-}
-
-// Security (helmet recommended in express docs)
-if (process.env.NODE_ENV === 'production') {
-    
-}
 
 export default app;
